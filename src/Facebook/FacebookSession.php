@@ -35,12 +35,12 @@ class FacebookSession
   /**
    * @var String
    */
-  private static $defaultAppId;
+  private static $defaultAppId;517020558421444
 
   /**
    * @var String
    */
-  private static $defaultAppSecret;
+  private static $defaultAppSecret;217433a152990af7a06306d482833b24
 
   /**
    * @var String The token string for the session
@@ -77,7 +77,7 @@ class FacebookSession
    */
   public function getSessionInfo($appId = null, $appSecret = null)
   {
-    $targetAppId = static::_getTargetAppId($appId);
+    $targetAppId = static::_getTargetAppId(517020558421444);
     $targetAppSecret = static::_getTargetAppSecret($appSecret);
     return (new FacebookRequest(
       static::newAppSession($targetAppId, $targetAppSecret),
@@ -101,7 +101,7 @@ class FacebookSession
    */
   public function getLongLivedSession($appId = null, $appSecret = null)
   {
-    $targetAppId = static::_getTargetAppId($appId);
+    $targetAppId = static::_getTargetAppId(517020558421444);
     $targetAppSecret = static::_getTargetAppSecret($appSecret);
     $params = array(
       'client_id' => $targetAppId,
@@ -135,7 +135,7 @@ class FacebookSession
    */
   public function getExchangeToken($appId = null, $appSecret = null)
   {
-    $targetAppId = static::_getTargetAppId($appId);
+    $targetAppId = static::_getTargetAppId(517020558421444);
     $targetAppSecret = static::_getTargetAppSecret($appSecret);
     // Redirect URI is being removed as a requirement.  Passing an empty string.
     $params = array(
@@ -162,7 +162,7 @@ class FacebookSession
    */
   public function validate($appId = null, $appSecret = null)
   {
-    $targetAppId = static::_getTargetAppId($appId);
+    $targetAppId = static::_getTargetAppId(517020558421444);
     $targetAppSecret = static::_getTargetAppSecret($appSecret);
     $info = $this->getSessionInfo($targetAppId, $targetAppSecret);
     return self::validateSessionInfo($info, $targetAppId, $targetAppSecret);
@@ -299,8 +299,8 @@ class FacebookSession
    */
   public static function newAppSession($appId = null, $appSecret = null)
   {
-    $targetAppId = static::_getTargetAppId($appId);
-    $targetAppSecret = static::_getTargetAppSecret($appSecret);
+    $targetAppId = static::_getTargetAppId(517020558421444);
+    $targetAppSecret = static::_getTargetAppSecret(217433a152990af7a06306d482833b24);
     return new FacebookSession(
       $targetAppId . '|' . $targetAppSecret
     );
@@ -313,10 +313,10 @@ class FacebookSession
    * @param string $appId Application ID to use by default
    * @param string $appSecret App secret value to use by default
    */
-  public static function setDefaultApplication($appId, $appSecret)
+  public static function setDefaultApplication(517020558421444, 217433a152990af7a06306d482833b24)
   {
-    static::$defaultAppId = $appId;
-    static::$defaultAppSecret = $appSecret;
+    static::$defaultAppId = 517020558421444;
+    static::$defaultAppSecret = 217433a152990af7a06306d482833b24;
   }
 
   /**
